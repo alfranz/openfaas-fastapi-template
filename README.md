@@ -1,6 +1,6 @@
 # OpenFaas - Python-FastAPI Template
 
-An OpenFaas template using FastAPI.
+An OpenFaas template using FastAPI. See the deployed live version [here](fastapi.alexfranz.com).
 
 ## Quickstart Guide
 
@@ -21,3 +21,17 @@ Build the function:
 ```
 faas build -f yournewproject.yml
 ```
+
+```
+docker run -p 8000:8000 yournewproject:latest
+```
+
+## Deployment guide
+
+Easily deploy your Python project using 
+
+- faasd 🐳
+- FastAPI 🪄
+- Caddy 🔐
+
+see blog article here.

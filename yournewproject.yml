@@ -1,0 +1,10 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: https://faasd.alexfranz.com
+functions:
+  yournewproject:
+    lang: python3-fastapi
+    handler: ./yournewproject
+    image: yournewproject:latest
+

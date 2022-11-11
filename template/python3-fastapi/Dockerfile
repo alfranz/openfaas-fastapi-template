@@ -32,7 +32,7 @@ WORKDIR /home/app/
 
 USER root
 # remove build dependencies
-RUN apt remove musl-dev gcc make -y && apt autoremove
+RUN apt remove musl-dev gcc make -y && apt -y autoremove
 COPY function function
 RUN chown -R app:app ./
 USER app
