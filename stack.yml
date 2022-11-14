@@ -3,8 +3,8 @@ provider:
   name: openfaas
   gateway: https://faasd.alexfranz.com
 functions:
-  yournewproject:
+  faasd-demo:
     lang: python3-fastapi
-    handler: ./yournewproject
-    image: yournewproject:latest
+    handler: ./faasd-demo
+    image: ghcr.io/alfranz/faasd-demo:latest
 

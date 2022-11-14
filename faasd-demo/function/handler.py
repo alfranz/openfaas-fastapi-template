@@ -7,6 +7,7 @@ import random
 router = APIRouter()
 templates = Jinja2Templates(directory="function/assets")
 
+
 class TemperatureResponse(BaseModel):
     temperature: float = 21.0
     location: str = "Berlin, Germany"
@@ -19,6 +20,7 @@ async def service_index(request: Request):
         "index.jinja",
         {"request": request, "variable": random_int},
     )
+
 
 @router.get("/temperature")
 async def temp_endpoint(response_class=TemperatureResponse):
