@@ -1,9 +1,8 @@
 from fastapi import APIRouter, Request, HTTPException
 from pydantic import BaseModel
-from typing import Dict, List
 from fastapi.responses import HTMLResponse, JSONResponse
 from fastapi.templating import Jinja2Templates
-
+import random
 
 router = APIRouter()
 templates = Jinja2Templates(directory="function/assets")
@@ -15,9 +14,10 @@ class TemperatureResponse(BaseModel):
 
 @router.get("/")
 async def service_index(request: Request):
+    random_int = random.randint(0, 100)
     return templates.TemplateResponse(
         "index.jinja",
-        {"request": request, "a_variable": "hello this is arbitrary text"},
+        {"request": request, "variable": random_int},
     )
 
 @router.get("/temperature")
