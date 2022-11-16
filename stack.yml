@@ -4,7 +4,7 @@ provider:
   gateway: https://faasd.alexfranz.com
 functions:
   faasd-demo:
-    lang: python3-fastapi
-    handler: ./faasd-demo
+    lang: dockerfile
+    handler: ./demo
     image: ghcr.io/alfranz/faasd-demo:latest
 
