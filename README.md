@@ -7,7 +7,7 @@ An OpenFaas template using FastAPI. Find the deployed live demo [here](faasd-dem
 Pull the template first from this Github repo using the faas CLI: 
 
 ```
-faas template pull alfranz/openfaas-fastapi-template
+faas template pull https://github.com/alfranz/openfaas-fastapi-template
 ```
 
 To create a new function:
