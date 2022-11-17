@@ -19,23 +19,13 @@ WORKDIR /home/app/
 COPY requirements.txt   .
 USER root
 RUN pip install -r requirements.txt
-USER app
-COPY main.py           .
-
-RUN mkdir -p function
-RUN touch ./function/__init__.py
-WORKDIR /home/app/function/
-COPY function/requirements.txt	.
-RUN pip install --user -r requirements.txt
-
-WORKDIR /home/app/
-
-USER root
 # remove build dependencies
 RUN apt remove musl-dev gcc make -y && apt -y autoremove
-COPY function function
 RUN chown -R app:app ./
 USER app
+RUN touch ./__init__.py
+COPY ["*.py","/home/app/"]
+COPY assets assets
 
 ENV fprocess="uvicorn main:app --workers 1 --host 0.0.0.0 --port 8000"
 
