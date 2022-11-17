@@ -13,7 +13,7 @@ faas template pull https://github.com/alfranz/openfaas-fastapi-template
 To create a new function:
 
 ```
-faas new --lang dockerfile-fastapi yournewproject
+faas new --lang fastapi-docker yournewproject
 ```
 
 Build the function:
