@@ -1,5 +1,4 @@
 build
 .DS_Store
-template
 .python-version
 __pycache__/

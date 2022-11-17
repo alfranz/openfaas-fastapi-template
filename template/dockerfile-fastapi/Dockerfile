@@ -37,7 +37,7 @@ COPY function function
 RUN chown -R app:app ./
 USER app
 
-ENV fprocess="uvicorn main:app --workers 1 --host 0.0.0.0 --port 8000 --reload"
+ENV fprocess="uvicorn main:app --workers 1 --host 0.0.0.0 --port 8000"
 
 ENV cgi_headers="true"
 ENV mode="http"
