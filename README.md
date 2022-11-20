@@ -1,6 +1,6 @@
 # OpenFaas - Python-FastAPI Template
 
-An OpenFaas template using FastAPI. Find the deployed live demo [here](faasd-demo.alexfranz.com).
+An OpenFaas template using FastAPI. Find the deployed live demo [here](https://faasd-demo.alexfranz.com).
 
 ## Quickstart Guide
 
@@ -13,7 +13,7 @@ faas template pull https://github.com/alfranz/openfaas-fastapi-template
 To create a new function:
 
 ```
-faas new --lang fastapi-docker yournewproject
+faas new --lang dockerfile yournewproject
 ```
 
 Build the function:
