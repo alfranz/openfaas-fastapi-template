@@ -36,4 +36,4 @@ Easily deploy your Python project with
 - FastAPI 🪄
 - Caddy 🔐
 
-Blog article coming soon.
+Check out the blog article [here](https://alexfranz.com/posts/deploy-container-apps-with-faasd/) for more details.
